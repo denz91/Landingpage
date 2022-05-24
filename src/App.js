@@ -1,19 +1,43 @@
-import {Container,Row,Col,Button,Image} from 'react-bootstrap'
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Image,
+  Navbar,
+  Nav,
+} from "react-bootstrap";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import LinkContainer from "react-router-bootstrap/LinkContainer";
+import Beranda from "./pages/Beranda";
+import Tentang from "./pages/Tentang";
 function App() {
   return (
-    
-      <Container style={{height : '100vh'}}>
-        <Row className='h-100' lg={2} md={2} sm={1} xs={1}>
-          <Col className = 'my-auto'><h1 className='fw-bold fs-1'>Business</h1>
-          <h4 className='fw-semibold'>Analyst</h4>
-          <p className='lh-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor dicta cumque officiis dolore iure, sapiente doloremque nisi accusantium nulla molestiae eius obcaecati architecto vero consectetur!</p>
-          <Button variant = 'primary' className='rounded-pill px-4 fs-6 fw-bold'>REGISTER</Button>
-          </Col>
-          <Col className='my-auto'><img className ='img-fluid' src="/img/ilustrasi.png" alt="" />
-          </Col>
-        </Row>
+    <Router>
+      <Navbar bg="primary" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Landing Page</Navbar.Brand>
+          <Nav className="me-auto">
+            <LinkContainer to="/">
+              <Nav.Link>Beranda</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/tentang">
+              <Nav.Link>Tentang</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="kontak">
+              <Nav.Link>Kontak</Nav.Link>
+            </LinkContainer>
+          </Nav>
+        </Container>
+      </Navbar>
+      <Container style={{ height: "100vh" }}>
+        <Routes>
+          <Route path="/" element={<Beranda />} />
+          <Route path="/tentang" element={<Tentang />} />
+          <Route path="/kontak" element={<div>halaman kontak</div>} />
+        </Routes>
       </Container>
-    
+    </Router>
   );
 }
 
