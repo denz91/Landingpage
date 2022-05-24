@@ -25,9 +25,9 @@ const Tentang = () => {
       <Row className="justify-content-evenly">
         <h1 className="text-center mb-5">Testimonial</h1>
         <div className="w-25">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
-              className="img-fluid"
+              className="img-fluid rounded-circle"
               style={{ height: "300px", objectFit: "cover" }}
               width="auto"
               variant="top"
@@ -43,8 +43,9 @@ const Tentang = () => {
           </Card>
         </div>
         <div className="w-25">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
+              className="img-fluid rounded-circle"
               style={{
                 height: "300px",
                 objectFit: "cover",
@@ -64,8 +65,27 @@ const Tentang = () => {
           </Card>
         </div>
         <div className="w-25">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }} className="shadow">
             <Card.Img
+              className="img-fluid rounded-circle"
+              style={{ height: "300px", objectFit: "cover" }}
+              width="auto"
+              variant="top"
+              src="/img/2.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Mantap!</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="w-25">
+          <Card style={{ width: "18rem" }} className="shadow">
+            <Card.Img
+              className="img-fluid rounded-circle"
               style={{ height: "300px", objectFit: "cover" }}
               width="auto"
               variant="top"
