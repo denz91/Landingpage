@@ -15,20 +15,29 @@ import Kontak from "./pages/Kontak";
 function App() {
   return (
     <Router>
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="#home">Landing Page</Navbar.Brand>
-          <Nav className="me-auto">
-            <LinkContainer to="/">
-              <Nav.Link>Beranda</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/tentang">
-              <Nav.Link>Tentang</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/kontak">
-              <Nav.Link>Kontak</Nav.Link>
-            </LinkContainer>
-          </Nav>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav
+              className="ml-auto justify-content-between"
+              style={{ width: "15vw" }}
+            >
+              <LinkContainer to="/">
+                <Nav.Link>Beranda</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/tentang">
+                <Nav.Link>Tentang</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/kontak">
+                <Nav.Link>Kontak</Nav.Link>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
       <Container style={{ height: "100vh" }}>

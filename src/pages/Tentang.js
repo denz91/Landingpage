@@ -4,7 +4,7 @@ import { Row, Col, Button, Card } from "react-bootstrap";
 const Tentang = () => {
   return (
     <Row>
-      <Row className="h-100">
+      <Row className="h-100 mt-3" lg={2} md={1} sm={1} xs={1}>
         <Col className="my-auto">
           <h1 className="fw-bold m-0">ABOUT</h1>
           <h1 className="fw-bold">US</h1>
@@ -22,10 +22,10 @@ const Tentang = () => {
           <img className="img-fluid" src="/img/about.png" alt="" />
         </Col>
       </Row>
-      <Row className="justify-content-evenly">
-        <h1 className="text-center mb-5">Testimonial</h1>
-        <div className="w-25">
-          <Card style={{ width: "18rem" }} className="shadow">
+      <h1 className="text-center mb-5">Testimonial</h1>
+      <Row className="justify-content-evenly" lg={4} md={2} sm={2} xs={1}>
+        <Col>
+          <Card className="shadow">
             <Card.Img
               className="img-fluid rounded-circle"
               style={{ height: "300px", objectFit: "cover" }}
@@ -41,9 +41,9 @@ const Tentang = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </div>
-        <div className="w-25">
-          <Card style={{ width: "18rem" }} className="shadow">
+        </Col>
+        <Col>
+          <Card className="shadow">
             <Card.Img
               className="img-fluid rounded-circle"
               style={{
@@ -63,9 +63,9 @@ const Tentang = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </div>
-        <div className="w-25">
-          <Card style={{ width: "18rem" }} className="shadow">
+        </Col>
+        <Col>
+          <Card className="shadow">
             <Card.Img
               className="img-fluid rounded-circle"
               style={{ height: "300px", objectFit: "cover" }}
@@ -81,9 +81,9 @@ const Tentang = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </div>
-        <div className="w-25">
-          <Card style={{ width: "18rem" }} className="shadow">
+        </Col>
+        <Col>
+          <Card className="shadow">
             <Card.Img
               className="img-fluid rounded-circle"
               style={{ height: "300px", objectFit: "cover" }}
@@ -99,7 +99,7 @@ const Tentang = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </div>
+        </Col>
       </Row>
     </Row>
   );

@@ -13,7 +13,7 @@ const Kontak = () => {
       >
         <Col className="mt-3 pt-3 " lg={5}>
           <h1
-            className="mt-5 text-end text-muted"
+            className="mt-5 text-end text-muted mb-0"
             style={{ fontSize: "5.2rem" }}
           >
             CONTACT US
