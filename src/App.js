@@ -40,7 +40,7 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container style={{ height: "100vh" }}>
+      <Container className="min-vh-100 pb-5">
         <Routes>
           <Route path="/" element={<Beranda />} />
           <Route path="/tentang" element={<Tentang />} />
