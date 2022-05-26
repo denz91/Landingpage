@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LinkContainer from "react-router-bootstrap/LinkContainer";
 import Beranda from "./pages/Beranda";
 import Tentang from "./pages/Tentang";
+import Kontak from "./pages/Kontak";
 function App() {
   return (
     <Router>
@@ -24,7 +25,7 @@ function App() {
             <LinkContainer to="/tentang">
               <Nav.Link>Tentang</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="kontak">
+            <LinkContainer to="/kontak">
               <Nav.Link>Kontak</Nav.Link>
             </LinkContainer>
           </Nav>
@@ -34,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Beranda />} />
           <Route path="/tentang" element={<Tentang />} />
-          <Route path="/kontak" element={<div>halaman kontak</div>} />
+          <Route path="/kontak" element={<Kontak />} />
         </Routes>
       </Container>
     </Router>
